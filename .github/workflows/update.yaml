@@ -13,7 +13,7 @@ jobs:
           python-version: '3.x'
       - run: |
           pip install yfinance pandas
-          python market_newsletter.py
+          python script.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Update market report"
