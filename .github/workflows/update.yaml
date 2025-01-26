@@ -1,0 +1,19 @@
+name: Update Market Report
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Runs every 10 minutes
+
+jobs:
+  update-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - run: |
+          pip install yfinance pandas
+          python market_newsletter.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update market report"
