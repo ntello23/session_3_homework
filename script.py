@@ -2,6 +2,8 @@ import yfinance as yf
 import pandas as pd
 import datetime
 
+from save_data import save_market_report
+
 # Creates empty dataframe to add data too
 all_data = pd.DataFrame(columns=["Ticker", "Open", "Close"])
 
@@ -61,3 +63,6 @@ all_data['Abolsolute Change'] = all_data['Close'] - all_data['Open'] # calculate
 all_data['Percentage Change'] = ((all_data['Close'] - all_data['Open']) / all_data['Open']) * 100 # calculates the percentage change
 
 print(all_data)
+
+# This uses the save_data to push to a HTML file
+save_market_report(all_data)
