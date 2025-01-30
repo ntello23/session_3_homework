@@ -1,7 +1,7 @@
 name: Update Market Report
 on:
   schedule:
-    - cron: '0 0 * * 5' # run every friday midnight
+    - cron: '30 0 * * 6' # run every Saturday at 00:30 AM
 
 jobs:
   update-report:
