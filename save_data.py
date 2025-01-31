@@ -13,7 +13,7 @@ def save_market_report(data_df, monday, friday):
         </style>
     </head>
     <body>
-        <h2>Market Update {datetime.date.today()}</h2>
+        <h2>Market Update from {monday} to {friday}</h2>
         {data_df.to_html()}
         Stock names that have a '=' in the name refer to commodities, so Gold, Silver, Brent Oil, Wheat, and Copper.
         <p>Last updated: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
