@@ -10,4 +10,6 @@ To use this file, run the code,
 ```
 pip install -r requirements.txt
 ```
-in the terminal to download the libraries and versions that I used. Then run the file _'script.py'_. A pandas dataframe will be printed in the console with infomration for each stock/asset. To use your own tickers, replace the elements in the list in line 51 called _tickers_ with the tickers you want.
+in the terminal to download the libraries and versions that I used. Then run the file _'script.py'_. A pandas dataframe will be printed in the console with infomration for each stock/asset. Additionaly, the file called market_report.html will be updated with the new information.
+
+To use your own tickers, replace the elements in the list called _tickers_ with the tickers you want.
