@@ -94,4 +94,3 @@ print(all_data)
 # This uses the save_data to push to a HTML file
 monday, friday = get_monday_and_friday()
 save_market_report(all_data, monday, friday)
-print(monday, friday)
