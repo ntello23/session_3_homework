@@ -20,7 +20,7 @@ def get_monday_and_friday():
     today = datetime.date.today() # Gets todays date
 
     # Gets last Friday
-    days_to_last_friday = (today.weekday() - 4) + 7  # Finds how many days I am from the next friday, since Friday is day 04, then adds 7 to see how many days I am away from last friday
+    days_to_last_friday = (today.weekday() - 4) % 7  # Finds how many days I am from the next friday, since Friday is day 04, then adds 7 to see how many days I am away from last friday
     last_friday = today - datetime.timedelta(days=days_to_last_friday) # finds last friday by subrtacing the todays date and the amount of days I am from last friday
 
     # Calculate the Monday before last Friday
@@ -94,3 +94,4 @@ print(all_data)
 # This uses the save_data to push to a HTML file
 monday, friday = get_monday_and_friday()
 save_market_report(all_data, monday, friday)
+print(monday, friday)
